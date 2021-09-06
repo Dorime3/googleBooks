@@ -1,0 +1,46 @@
+.wrapperPage {
+    display: flex;
+    padding: 50px 50px 0;
+}
+
+.imageblock {
+    position: relative;
+    min-width: 30%;
+}
+
+.imagePage {
+    position: absolute;
+    margin: auto;
+    width: 80%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 0.6);
+}
+
+.aboutPage {
+    text-align: left;
+}
+
+.categoriesPage {
+    color: rgb(136, 133, 133);
+    font-size: 14px;
+}
+
+.titlePage {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 5px 0 15px;
+}
+
+.authorsPage {
+    color: rgb(167, 167, 167);
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.descriptionPage {
+    font-size: 12px;
+    margin-top: 20px;
+}

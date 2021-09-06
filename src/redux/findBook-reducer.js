@@ -8,7 +8,8 @@ const initialState = {
     selectedTheme: 'all',
     availableRelevance: ['relevance', 'newest'],
     selectedRelevance: 'relevance',
-    bookId: null
+    bookId: null,
+    isFetching: true
 }
 
 
@@ -49,6 +50,11 @@ const findBookReducer = (state = initialState, action) => {
                 ...state,
                 booksData: [...state.booksData, ...action.books]
             }
+        case 'FETCH':
+            return {
+                ...state,
+                isFetching: action.toggle
+            }
         default:
             return state;
     }
@@ -75,6 +81,13 @@ export const selectTheme = (theme) => {
     }
 }
 
+export const setBooks = (data) => {
+    return {
+        type: 'SET_BOOKS',
+        data
+    }
+}
+
 export const selectRelevance = (rel) => {
     return {
         type: 'SELECT_RELEVANCE',
@@ -96,11 +109,32 @@ export const addBooks = (books) => {
     }
 }
 
-export const getBooksFromInput = (text, theme, rel, index) => dispatch => {
+export const toggleIsFetching = (toggle) => {
+    return {
+        type: 'FETCH',
+        toggle
+    }
+}
+
+export const getBooksFromInput = (text, theme, rel) => dispatch => {
+    dispatch(toggleIsFetching(true))
+    requestsAPI.getBooks(text, theme, rel)
+        .then(response => {
+            dispatch(setBooks(response.data.items))
+            dispatch(totalItems(response.data.totalItems))
+        }).then(() => {
+            dispatch(toggleIsFetching(false))
+        })
+}
+
+export const addBooksFromButton = (text, theme, rel, index) => dispatch => {
+    dispatch(toggleIsFetching(true))
     requestsAPI.getBooks(text, theme, rel, index)
         .then(response => {
             dispatch(addBooks(response.data.items))
-            dispatch(totalItems(response.data.totalItems))
+        }).then(() => {
+            dispatch(toggleIsFetching(false))
         })
 }
+
 export default findBookReducer;

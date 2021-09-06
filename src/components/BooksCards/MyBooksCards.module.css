@@ -1,0 +1,64 @@
+.wrapperBooks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.book {
+    width: 250px;
+    align-items: stretch;
+    border: 1px rgb(173, 173, 173) solid;
+    padding: 5px 0;
+    margin: 10px;
+    display: flex;
+    padding: 10px;
+}
+
+.wrapperBook {
+    margin: auto;
+}
+
+.bookImage {
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 0.6);
+    width: 150px;
+}
+
+.categoryBook {
+    color: rgb(136, 133, 133);
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.titleBook {
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.authorsBook {
+    color: rgb(167, 167, 167);
+    font-size: 12px;
+}
+
+.bookParams {
+    text-align: left;
+    padding: 5px 20px 0;
+}
+
+.moreButton {
+    margin: 10px 0 50px;
+    width: 40%;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: #4676d7;
+    color: #fff;
+    height: 37px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.moreButton:hover {
+    background: transparent;
+    color: #222;
+    border-color: #4676d7;
+}

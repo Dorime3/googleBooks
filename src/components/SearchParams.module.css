@@ -1,0 +1,52 @@
+.searchForm {
+    position: relative;
+    display: inline-block;
+    width: 400px;
+}
+
+.wrapperSearch {
+    padding: 20px 0;
+    background: url(../imgs/backgroundBooks.jpg) no-repeat center bottom/cover;
+}
+
+.wrapperSearch h1 {
+    color: rgb(255, 219, 190);
+}
+
+.inputField {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 0.75px solid rgb(170, 170, 170);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(119, 118, 118);
+    font-family: inherit;
+}
+.inputField:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.buttonSearch {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    margin: 0 0 0 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: #4676d7;
+    color: #fff;
+    height: 100%;
+    font-family: inherit;
+}
+
+.buttonSearch:hover {
+    background: transparent;
+    color: #222;
+    border-color: #4676d7;
+}
+
+.searchFilters {
+    margin: 15px 0 30px;
+}

@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Redirect, withRouter } from 'react-router-dom';
 import BooksPage from './BooksPage';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+import { setBookId } from '../../redux/findBook-reducer';
+
+
 
 const BooksPageContainer = (props) => {
 
@@ -18,6 +23,13 @@ const BooksPageContainer = (props) => {
     </>)
 }
 
+const mapStateToProps = (state) => ({
+    textFromField: state.findBooksPage.textFromField,
+    booksData: state.findBooksPage.booksData,
+    bookId: state.findBooksPage.bookId
+})
 
-
-export default withRouter(BooksPageContainer);
+export default compose(
+    connect(mapStateToProps, { setBookId }),
+    withRouter)
+    (BooksPageContainer);
