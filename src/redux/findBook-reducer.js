@@ -9,7 +9,7 @@ const initialState = {
     availableRelevance: ['relevance', 'newest'],
     selectedRelevance: 'relevance',
     bookId: null,
-    isFetching: true
+    isFetching: false
 }
 
 
