@@ -11,7 +11,7 @@
 .imagePage {
     position: absolute;
     margin: auto;
-    width: 80%;
+    height: 80%;
     top: 0;
     left: 0;
     right: 0;
@@ -21,6 +21,7 @@
 
 .aboutPage {
     text-align: left;
+    min-height: 300px;
 }
 
 .categoriesPage {

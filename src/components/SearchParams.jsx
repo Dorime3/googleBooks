@@ -13,7 +13,8 @@ const SearchParams = (props) => {
         props.findBook(event.target.value)
     }
     const onSendTextBook = (e) => {
-        if (e.charCode === 13 || e.target.nodeName === 'BUTTON') {
+        if (e.target.value !== '' & e.charCode === 13 || e.target.nodeName === 'BUTTON') {
+            console.log(e)
             props.history.push('/mainpage')
             props.getBooksFromInput(props.textFromField, props.selectedTheme, props.selectedRelevance)
         }
