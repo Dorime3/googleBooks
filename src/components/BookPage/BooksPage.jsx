@@ -2,16 +2,16 @@ import React from 'react';
 import s from './BooksPage.module.css'
 
 const BooksPage = (props) => {
-
+    const { categories, title, authors, description, imageLinks } = props.selectedBook
     return (<div className={s.wrapperPage}>
         <div className={s.imageblock}>
-            <img className={s.imagePage} src={props.selectedBook.imageLinks.thumbnail} alt='' />
+            {imageLinks.thumbnail && <img className={s.imagePage} src={imageLinks.thumbnail} alt='' />}
         </div>
         <div className={s.aboutPage}>
-            <div className={s.categoriesPage}>{props.selectedBook.categories.map(cath => <span key={cath}> {cath} </span>)}</div>
-            <div className={s.titlePage}>{props.selectedBook.title}</div>
-            <div className={s.authorsPage}>{props.selectedBook.authors[0]}</div>
-            <div className={s.descriptionPage}>{props.selectedBook.description}</div>
+            {categories && <div className={s.categoriesPage}>{categories.map(cath => <span key={cath}> {cath} </span>)}</div>}
+            {title && <div className={s.titlePage}>{title}</div>}
+            {authors && <div className={s.authorsPage}>{authors[0]}</div>}
+            {description && <div className={s.descriptionPage}>{description}</div>}
         </div>
     </div>
     )
