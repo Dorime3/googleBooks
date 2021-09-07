@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/googleBooks/static/css/main.2a27546d.chunk.css",
+    "main.css": "/googleBooks/static/css/main.110093f0.chunk.css",
     "main.js": "/googleBooks/static/js/main.dc723602.chunk.js",
     "main.js.map": "/googleBooks/static/js/main.dc723602.chunk.js.map",
     "runtime-main.js": "/googleBooks/static/js/runtime-main.99e7d2f3.js",
@@ -10,7 +10,7 @@
     "static/js/3.aa99376a.chunk.js": "/googleBooks/static/js/3.aa99376a.chunk.js",
     "static/js/3.aa99376a.chunk.js.map": "/googleBooks/static/js/3.aa99376a.chunk.js.map",
     "index.html": "/googleBooks/index.html",
-    "static/css/main.2a27546d.chunk.css.map": "/googleBooks/static/css/main.2a27546d.chunk.css.map",
+    "static/css/main.110093f0.chunk.css.map": "/googleBooks/static/css/main.110093f0.chunk.css.map",
     "static/js/2.0a38d416.chunk.js.LICENSE.txt": "/googleBooks/static/js/2.0a38d416.chunk.js.LICENSE.txt",
     "static/media/SearchParams.module.css": "/googleBooks/static/media/backgroundBooks.512cb6ab.jpg",
     "static/media/preloader.af2ae354.svg": "/googleBooks/static/media/preloader.af2ae354.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.99e7d2f3.js",
     "static/js/2.0a38d416.chunk.js",
-    "static/css/main.2a27546d.chunk.css",
+    "static/css/main.110093f0.chunk.css",
     "static/js/main.dc723602.chunk.js"
   ]
 }
