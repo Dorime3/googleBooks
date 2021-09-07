@@ -28,7 +28,8 @@ const BooksCardsContainer = (props) => {
                         image={el.volumeInfo.imageLinks.smallThumbnail}
                         title={el.volumeInfo.title}
                         categories={el.volumeInfo.categories}
-                        authors={el.volumeInfo.authors} />
+                        authors={el.volumeInfo.authors}
+                        isFetching={props.isFetching} />
                 )}
             </div>
             {!!(props.booksData.length) && <button className={s.moreButton} onClick={onGetMoreBooks}>Show more</button>}

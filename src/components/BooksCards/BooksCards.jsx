@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import s from './MyBooksCards.module.css'
 
 
-const BooksCards = ({ image, categories, title, authors, id }) => {
+const BooksCards = ({ image, categories, title, authors, id, isFetching }) => {
     return (
         <div className={s.book} >
             <div className={s.wrapperBook}>

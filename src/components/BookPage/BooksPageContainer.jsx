@@ -12,7 +12,6 @@ const BooksPageContainer = (props) => {
     useEffect(() => {
         const urlId = props.location.pathname.match(/\b(\w+)\b$/gm)[0]
         props.setBookId(urlId)
-        debugger
     }, [props.bookId])
     return (<>
         {props.bookId &&
